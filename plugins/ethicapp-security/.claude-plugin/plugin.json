@@ -1,0 +1,8 @@
+{
+  "name": "ethicapp-security",
+  "version": "0.1.0",
+  "description": "Security procedures for the EthicApp repositories: audit and remediate known dependency vulnerabilities with verification in the built images.",
+  "author": {
+    "name": "EthicApp-Development"
+  }
+}

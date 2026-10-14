@@ -1,0 +1,18 @@
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Language tooling that may be used while testing scripts
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Scratch output from running the skills' scripts locally
+scratch/
+*.audit.json

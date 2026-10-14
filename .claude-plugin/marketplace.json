@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ethicapp-agent-skills",
+  "owner": {
+    "name": "EthicApp-Development"
+  },
+  "description": "Procedural skills for coding agents working on the EthicApp repositories (ethicapp-main, ethicapp-ai-additions, ethicapp-deployment).",
+  "plugins": [
+    {
+      "name": "ethicapp-security",
+      "source": "./plugins/ethicapp-security",
+      "description": "Security procedures: dependency vulnerability audit and remediation.",
+      "version": "0.1.0",
+      "category": "security",
+      "tags": ["security", "dependencies", "pip-audit", "npm-audit"]
+    }
+  ]
+}
