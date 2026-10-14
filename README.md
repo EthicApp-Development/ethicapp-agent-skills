@@ -35,8 +35,9 @@ Interactive equivalent, for a personal setup or another repository:
 /plugin install ethicapp-security@ethicapp-agent-skills
 ```
 
-The repository is private: Claude Code clones it with the machine's git
-credentials (SSH key, or HTTPS after `gh auth login` and `gh auth setup-git`).
+The repository is public, so cloning needs no credentials. Claude Code uses
+the machine's git configuration (SSH if `ssh -T git@github.com` works,
+otherwise HTTPS).
 
 ## How the skills relate to each repository
 
