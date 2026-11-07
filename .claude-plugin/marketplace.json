@@ -18,7 +18,7 @@
       "name": "ethicapp-release",
       "source": "./plugins/ethicapp-release",
       "description": "Release procedures: cut a release with its CHANGELOG entry, tag and GitHub Release; publish its images; pin it on a deployment target.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "deployment",
       "tags": ["release", "changelog", "ghcr", "deployment"]
     }
