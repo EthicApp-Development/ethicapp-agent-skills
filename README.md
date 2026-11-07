@@ -8,6 +8,9 @@ each plugin groups the skills of one concern.
 | Plugin | Skill | Invoke as | Purpose |
 | --- | --- | --- | --- |
 | `ethicapp-security` | `dependency-vulnerabilities` | `/ethicapp-security:dependency-vulnerabilities` | Audit and remediate known dependency vulnerabilities, verified in the built images, ending in an issue and a pull request. |
+| `ethicapp-release` | `cut-release` | `/ethicapp-release:cut-release` | Choose the tag, write the `CHANGELOG.md` entry in a release pull request, then create the annotated tag and the GitHub Release. |
+| `ethicapp-release` | `publish-images` | `/ethicapp-release:publish-images` | Build and push the release's images from a clean worktree of the tag, and verify their digests and labels. |
+| `ethicapp-release` | `pin-deployment` | `/ethicapp-release:pin-deployment` | Pin the release on an ethicapp-deployment target, with contract sync, validation, a session record and a pull request. |
 
 ## Using the skills in a repository
 
@@ -23,7 +26,8 @@ the folder gets the skills:
     }
   },
   "enabledPlugins": {
-    "ethicapp-security@ethicapp-agent-skills": true
+    "ethicapp-security@ethicapp-agent-skills": true,
+    "ethicapp-release@ethicapp-agent-skills": true
   }
 }
 ```
@@ -33,6 +37,7 @@ Interactive equivalent, for a personal setup or another repository:
 ```text
 /plugin marketplace add EthicApp-Development/ethicapp-agent-skills
 /plugin install ethicapp-security@ethicapp-agent-skills
+/plugin install ethicapp-release@ethicapp-agent-skills
 ```
 
 The repository is public, so cloning needs no credentials. Claude Code uses
@@ -48,7 +53,9 @@ starts by reading it. If a skill starts accumulating service names or paths,
 that content belongs to the repository, not here.
 
 Skills end in artifacts for human review (issues, pull requests, reports).
-They do not merge, publish images or deploy.
+They do not merge or deploy. The release skills push a release tag, its
+GitHub Release and its images, each only after the maintainer confirms that
+step.
 
 ## Layout
 
