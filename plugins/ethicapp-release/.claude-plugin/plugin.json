@@ -1,0 +1,8 @@
+{
+  "name": "ethicapp-release",
+  "version": "0.1.0",
+  "description": "Release procedures for the EthicApp repositories: cut a release (tag, CHANGELOG entry, GitHub Release), publish its images, and pin it on a deployment target.",
+  "author": {
+    "name": "EthicApp-Development"
+  }
+}
