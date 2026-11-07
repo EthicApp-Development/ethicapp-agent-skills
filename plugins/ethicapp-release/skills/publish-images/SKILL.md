@@ -64,7 +64,6 @@ scripts/ghcr-build-push.sh --owner ethicapp-development --tag <tag> [--service <
 ```
 
 - Use the default platform (`linux/amd64`) unless `AGENTS.md` says otherwise.
-- Never pass `--latest`.
 - Builds that run test stages must pass. If a test fails, stop and report the
   failure with the test names. Do not retry with the tests skipped.
 - If a push fails halfway, report which images reached the registry. Some
